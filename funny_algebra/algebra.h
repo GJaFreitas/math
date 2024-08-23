@@ -22,6 +22,7 @@ typedef _matrix *t_matrix;
 typedef _complex_num *t_complex_num;
 
 t_matrix ft_matrixalloc(int rows, int collumns);
+void ft_matrix_destructor(t_matrix m);
 t_matrix ft_input(const char *str);
 void ft_displaymatrix(const t_matrix s_matrix);
 void	ft_print_imaginarynum(t_complex_num num);

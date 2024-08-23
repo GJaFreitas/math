@@ -17,6 +17,21 @@ t_matrix ft_matrixalloc(int rows, int collumns)
 	return ret;
 }
 
+void ft_matrix_destructor(t_matrix m)
+{
+	int r = 0;
+
+	if (m == NULL)
+		return ;
+	while (r != m->rows)
+	{
+		free(m->matrix[r]);
+		r++;
+	}
+	free(m->matrix);
+	free(m);
+}
+
 t_matrix ft_input(const char *str)
 {
     int rows, collumns;

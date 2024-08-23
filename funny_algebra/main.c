@@ -1,4 +1,5 @@
 #include "algebra.h"
+#include "rotations.h"
 
 int main(int argc, char **argv)
 {
@@ -34,6 +35,16 @@ int main(int argc, char **argv)
 		t_matrix matrix4 = ft_input("3x3\n-2 -1 2\n2 1 4\n-3 3 -1");
 		ft_displaymatrix(matrix4);
 		printf("Determinant: %f", ft_determinant(matrix4));
+	}
+	if (argv[1][0] == '2')
+	{
+		char *str = "2x2\n1 2\n4 5";
+		t_matrix matrix = ft_input(str);
+		ft_displaymatrix(matrix);
+		t_matrix get_rotated = ft_2D_90_degree_rot(matrix);
+		ft_displaymatrix(get_rotated);
+		ft_matrix_destructor(get_rotated);
+		ft_matrix_destructor(matrix);
 	}
 
 	return 0;
