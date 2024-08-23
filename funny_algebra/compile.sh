@@ -1,1 +1,1 @@
-gcc -g -o program *.c
+gcc -g *.c
